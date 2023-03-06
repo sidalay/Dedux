@@ -4,14 +4,23 @@ FileHandler::FileHandler() {
 
 }
 
-bool FileHandler::LoadProject(std::ifstream input) {
-  return false;
+FileHandler::FileHandler(std::string path) 
+  : m_stream{path} 
+{
+  m_stream ? pathFound = true : pathFound = false;
 }
 
-bool FileHandler::ReadProject() {
-  return false;
+void FileHandler::LoadProject(std::ifstream input) {
+  
 }
 
-bool FileHandler::WriteProject() {
-  return false;
+void FileHandler::ReadProject() {
+  std::string temp{};
+  while (std::getline(m_stream, temp)) {
+    m_buffer += temp + '\n';
+  }
+}
+
+void FileHandler::WriteProject() {
+  
 }
