@@ -1,0 +1,15 @@
+/******************************************************/
+*   [id_here]
+*   [project_name]
+*   [user_name] 
+*   [date / time]
+*
+*   [] <-- square brackets should be autofill
+*
+*   # <--- used for comments
+*   
+*   : <--- indicates text content start
+*
+*
+*
+/******************************************************/
