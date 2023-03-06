@@ -1,0 +1,11 @@
+[d9as98qwjawg-f991xbe42g67]
+[example_project]
+[asura]
+[2023.06.03]
+
+:
+Problem to solve: 
+  - Logical problem to solve
+
+Steps to solve it:
+  - Explain steps
