@@ -3,7 +3,7 @@
 
 /*
 * Structure that stores all of the information
-* parsed from the .txt file,
+* parsed from the .txt file
 * 
 * File & Project ID
 * Metadata
