@@ -28,7 +28,7 @@ struct FileHandler
   FileHandler();
   FileHandler(std::string path);
 
-  void LoadProject(std::ifstream input);
+  void LoadProject(std::string path);
   void ReadProject();
   void WriteProject();
 };

@@ -4,14 +4,13 @@ FileHandler::FileHandler() {
 
 }
 
-FileHandler::FileHandler(std::string path) 
-  : m_stream{path} 
-{
-  m_stream ? pathFound = true : pathFound = false;
+FileHandler::FileHandler(std::string path) {
+  LoadProject(path);
 }
 
-void FileHandler::LoadProject(std::ifstream input) {
-  
+void FileHandler::LoadProject(std::string path) {
+  m_stream.open(path);
+  pathFound = m_stream ? true : false;
 }
 
 void FileHandler::ReadProject() {
