@@ -4,13 +4,17 @@ FileHandler::FileHandler() {
 
 }
 
-FileHandler::FileHandler(std::string path) {
+FileHandler::FileHandler(const std::string& path) {
   LoadProject(path);
 }
 
-void FileHandler::LoadProject(std::string path) {
+void FileHandler::LoadProject(const std::string& path) {
   m_stream.open(path);
   pathFound = m_stream ? true : false;
+  if (m_stream) {
+    ReadProject();
+    m_stream.close();
+  }
 }
 
 void FileHandler::ReadProject() {
