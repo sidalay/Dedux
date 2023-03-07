@@ -26,9 +26,9 @@ struct FileHandler
   bool pathFound{};
   
   FileHandler();
-  FileHandler(std::string path);
+  FileHandler(const std::string& path);
 
-  void LoadProject(std::string path);
+  void LoadProject(const std::string& path);
   void ReadProject();
   void WriteProject();
 };
