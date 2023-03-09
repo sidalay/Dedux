@@ -14,24 +14,24 @@
 * open the last session worked on (if the option is enabled). 
 */
 
-#include <fstream>
-#include <string>
-#include <string_view>
-#include <vector>
 #include <optional>
+
+#include "project.hpp"
 
 struct FileHandler 
 {  
   FileHandler();
-  FileHandler(const std::string& path);
+  FileHandler(const std::string path);
 
-  void LoadFile(const std::string& path);
+  void LoadFile(const std::string path);
   void WriteFile();
-  
+
   [[nodiscard]] std::optional<std::string> GetBuffer() const {return m_buffer;}
 private:
+  std::string m_path{};
   std::fstream m_stream{};
   std::optional<std::string> m_buffer{};
+
   [[nodiscard]] std::optional<std::string> ReadFile();
 };
 

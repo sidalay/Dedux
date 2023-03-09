@@ -4,12 +4,13 @@ FileHandler::FileHandler() {
 
 }
 
-FileHandler::FileHandler(const std::string& path) {
+FileHandler::FileHandler(const std::string path) {
   LoadFile(path);
 }
 
-void FileHandler::LoadFile(const std::string& path) {
-  m_stream.open(path);
+void FileHandler::LoadFile(const std::string path) {
+  m_path = path;
+  m_stream.open(m_path);
   m_buffer = ReadFile();
   m_stream.close();
 }
