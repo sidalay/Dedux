@@ -10,4 +10,19 @@
 * Main Content
 */
 
+#include <string>
+#include <fstream>
+
+struct Project 
+{
+  Project();
+
+  int m_date{};
+  std::string m_id{};
+  std::string m_title{};
+  std::string m_username{};
+  std::string m_body{};
+  std::fstream m_stream{};
+};
+
 #endif // PROJECT_HPP
