@@ -4,6 +4,8 @@ project(dedux)
 add_executable(${PROJECT_NAME}
   src/dedux.cpp
   src/fileHandler.cpp
+  src/project.cpp
+  src/projectHandler.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE )
